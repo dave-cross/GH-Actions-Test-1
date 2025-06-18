@@ -1,0 +1,12 @@
+name: Test and Deploy
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  new_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GH Context
+        run: echo "${{ toJSON(github) }}"
